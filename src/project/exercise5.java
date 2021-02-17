@@ -6,7 +6,7 @@ public class exercise5
 	
 	public static void solve(int n, int k)
 	{
-		int base = 10;
+		/*int base = 10;
 				
 		if(k == 0)
 		{
@@ -27,12 +27,22 @@ public class exercise5
 		if((int) Math.pow(base, k - 1) != 1)
 		{
 			System.out.println((int) Math.pow(base, k - 1));
+		}*/
+		
+		if(k == n)
+		{
+			System.out.println((int) Math.pow(10, k));
+			return;
 		}
+		System.out.println((int) Math.pow(10, k));
+		solve(n, k + 1);
+		System.out.println((int) Math.pow(10, k));
 	}
 
 	public static void main(String[] args) 
 	{ 
-		solve(5, K);
+		//solve(5, K);
+		solve(5, 1);
 	}
 
 }
